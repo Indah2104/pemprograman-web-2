@@ -27,14 +27,14 @@
         <?php
         $no = 1;
             /* Tulis Code Anda di sini */
-             foreach ($mahasiswa as $mahasiswa)
+             foreach ($mahasiswa as $dmahasiswa)
             {
                 echo "<tr>";
                 echo "<td>".$no."</td>
-                    <td>".$mahasiswa['nim']."</td>
-                    <td>".$mahasiswa['nama_mahasiswa']."</td>
-                    <td>".$mahasiswa['program_studi']."</td>";
-                echo "</tr>";
+                    <td>".$dmahasiswa['nim']."</td>
+                    <td>".$dmahasiswa['nama_mahasiswa']."</td>
+                    <td>".$dmahasiswa['program_studi']."</td>";
+                echo "</tr>";  
                 $no++;
             }
         ?>
