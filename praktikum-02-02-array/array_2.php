@@ -74,10 +74,10 @@
 
 
         echo "Daftar seluruh mahasiswa yang masuk kelompok Programmer PHP atau Programmer Python.Satukan terlebih dahulu data dari kedua variabel array dengan teknik merge : ";
-        $prorgrammer = array_merge ($programmer_php, $programmer_python);
+        $program = array_merge ($program_php, $program_python);
         echo "<ul>";
-        sort($prorgrammer);
-        foreach ($prorgrammer as $data)
+        asort($program);
+        foreach ($program as $data)
         {
             echo "<li>".$data."</li>";
         }
@@ -85,13 +85,13 @@
 
 
         echo "Lengkapi file array_2 php dengan perintah untuk menambahkan nama Anda ke dalam variabe programmer_php dengan menggunakan perintah array push().";
-        array_push($programmer_php, "Nurlinda Apriliani");
+        array_push($program_php, "Nurlinda Apriliani");
         echo "<br>Bagian 2 : <br>";
         echo "<ul>";
-        $countProgrammerPhp = count($programmer_php);
-        for($i=0; $i < $countProgrammerPhp; $i++)
+        $countProgramPhp = count($program_php);
+        for($i=0; $i < $countProgramPhp; $i++)
         {
-            echo "<li>".$programmer_php[$i] . "<br>";
+            echo "<li>".$program_php[$i] . "<br>";
         }
         echo "</ul>";
 
