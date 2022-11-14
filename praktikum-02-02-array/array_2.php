@@ -74,7 +74,7 @@
 
 
         echo "Daftar seluruh mahasiswa yang masuk kelompok Programmer PHP atau Programmer Python. Satukan terlebih dahulu data dari kedua variabel array dengan teknik merge : ";
-        $program = array_merge ($program_php, $program_phyton);
+        $program = array_unique (array_merge ($program_php, $program_phyton));
         echo "<ul>";
         asort($program);
         foreach ($program as $data)
