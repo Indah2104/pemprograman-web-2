@@ -9,3 +9,4 @@ function validasi ()
         alert("Anda Ingin Mencari Dengan Kata Kunci = "+txtKataKunci.value);
     }
 }
+

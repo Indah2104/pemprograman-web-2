@@ -10,3 +10,4 @@ else
    echo("Isi Semua Data,'<a href=input.html>Klik Di Sini</a>' untuk kembali" );
 }
 ?>
+
