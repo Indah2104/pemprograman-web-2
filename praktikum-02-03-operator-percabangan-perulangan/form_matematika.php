@@ -101,12 +101,13 @@
                     echo '<div class="alert alert-danger" role="alert">Angka Pertama Tidak Boleh lebih kecil daripada angka kedua </div>';
 
                   }
-                  else{
+                  else
+                  {
                     echo "Hasil Penjumlahan = ".($pertama + $kedua)."<br/>";
                     echo "Hasil Pengurangan = ".($pertama - $kedua)."<br/>";
                     echo "Hasil Perkalian = ".($pertama * $kedua)."<br/>";
                     echo "Hasil Pembagian = ".($pertama / $kedua)."<br/>";
-                    echo "Sisa Hsail Bagi = ".($pertama % $kedua)."<br/>";
+                    echo "Sisa Hasil Bagi = ".($pertama % $kedua)."<br/>";
                   }
                   ?>
                 </p>
