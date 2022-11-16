@@ -1,9 +1,10 @@
 <?php
 $data = array();
-for ($n=1; $n<=100; $n++)
-{
+$n=1;
+while ($n<=100){
     $angka_acak = rand(1, 1000);
     array_push ($data, $angka_acak);
+    $n++;
 }
 
 foreach ($data as $bilangan_genap)

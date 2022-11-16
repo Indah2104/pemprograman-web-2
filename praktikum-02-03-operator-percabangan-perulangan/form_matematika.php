@@ -81,20 +81,35 @@
                     <input type="number" class="form-control" id="angka2" name="kedua">
                   </div>
                 </div>
+                
                 <button type="submit" class="btn btn-success" id="hitung">HITUNG</button>
+                <p> 
                   <?php
-                  $data = isset ($_POST["pertama"]) ? $_POST["pertama"] : "" AND isset ($_POST["kedua"]) ? $_POST["kedua"] : "";
-                  if (empty($data)){
-                                        
+                  $pertama = isset ($_POST["pertama"]) ? $_POST["pertama"] : "";
+                  $kedua = isset ($_POST["kedua"]) ? $_POST["kedua"] : "";
+                  if (empty($pertama))
+                  {
+                    echo '<div class="alert alert-danger" role="alert">Angka Pertama Tidak Boleh Kososng </div>';
+                  }
+                  else if (empty($kedua))
+                  {
+                    echo '<div class="alert alert-danger" role="alert">Angka Kedua Tidak Boleh Kososng </div>';
+
+                  }
+                  else if ($pertama < $kedua )
+                  {
+                    echo '<div class="alert alert-danger" role="alert">Angka Pertama Tidak Boleh lebih kecil daripada angka kedua </div>';
+
                   }
                   else{
-                    echo "Hasil Penjumlahan";
-                    echo "Hasil Pengurangan";
-                    echo "Hasil Perkalian";
-                    echo "Hasil Pembagian";
-                    echo "Sisa Hsail Bagi ";
+                    echo "Hasil Penjumlahan = ".($pertama + $kedua)."<br/>";
+                    echo "Hasil Pengurangan = ".($pertama - $kedua)."<br/>";
+                    echo "Hasil Perkalian = ".($pertama * $kedua)."<br/>";
+                    echo "Hasil Pembagian = ".($pertama / $kedua)."<br/>";
+                    echo "Sisa Hsail Bagi = ".($pertama % $kedua)."<br/>";
                   }
                   ?>
+                </p>
                 </form>
               </div>            
           </div>
@@ -105,6 +120,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
 
 </body>
- </html>
+</html>
 
- 
