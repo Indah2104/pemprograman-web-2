@@ -103,11 +103,12 @@
                   }
                   else
                   {
-                    echo "Hasil Penjumlahan = ".($pertama + $kedua)."<br/>";
-                    echo "Hasil Pengurangan = ".($pertama - $kedua)."<br/>";
-                    echo "Hasil Perkalian = ".($pertama * $kedua)."<br/>";
-                    echo "Hasil Pembagian = ".($pertama / $kedua)."<br/>";
-                    echo "Sisa Hasil Bagi = ".($pertama % $kedua)."<br/>";
+                    echo "<h3>Hasil Operasi Aritmatika</h3>";
+                    echo "# Hasil Penjumlahan = ".($pertama + $kedua)."<br/>";
+                    echo "# Hasil Pengurangan = ".($pertama - $kedua)."<br/>";
+                    echo "# Hasil Perkalian = ".($pertama * $kedua)."<br/>";
+                    echo "# Hasil Pembagian = ".($pertama / $kedua)."<br/>";
+                    echo "# Sisa Hasil Bagi = ".($pertama % $kedua)."<br/>";
                   }
                   ?>
                 </p>
