@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,17 +13,26 @@
         <div class="row">
             <div class="col-md-6 offset-3">
                 <div class="header text-center">
-                  <h3> Halaman Dashboard</h3> 
-                </div>   
-                <div class="text-center">
+                    <h3> Halaman Dashboard</h3> 
+                    <p> 
                     <?php
-                    if ($inputUsername = isset ($_POST["inputUsername"]) ? $_POST["inputUsername"] : ""
-                         AND $inputPassword = isset ($_POST["inputPassword"]) ? $_POST["inputPassword"] : "")
-                         {
-                            echo "<p>Nama Pengguna = ".$inputUsername."</p>";
-                         }
-                    ?>
-                    <button type="submit" class="btn btn-danger"> Logout </button>
+                        session_start();
+
+                        if (isset($_SESSION['inputUsername']))
+                        {
+                            echo "Nama Pengguna = ".$_SESSION['inputUsername'];
+                        }
+                        else
+                        {
+                            header("location: login.php"); 
+                        }
+                        ?>
+                        
+                    </p>
+                </div>   
+                    
+                <div class="text-center">
+                    <a href='logout.php'><button type="submit" class="btn btn-danger" > Logout </button></a>
                 </div>
             </div>
         </div>

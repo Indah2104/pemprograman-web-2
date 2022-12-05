@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,11 +16,11 @@
                   <h3> Form  Login </h3> 
                 </div>   
                 <div class>
-                <form action="dashboard.php" method="post">
+                <form action="login.php" method="post">
                     <div class="row mb-3">
                         <label class="col-sm-3 col-form-label">Username</label>
                         <div class="col-sm-9">
-                        <input type="username" class="form-control" id="username" name="inputUsername">
+                        <input type="text" class="form-control" id="username" name="inputUsername">
                         </div>
                     </div>
                     <div class="row mb-3">
@@ -28,7 +29,25 @@
                         <input type="password" class="form-control" id="password" name="inputPassword">
                         </div>
                     </div>
-                        <button type="submit" class="btn btn-success"> Login </button>
+                    <?php
+                        session_start();
+                        $inputUsername = 'indah';
+                        $inputPassword = '2104';
+                        if (isset($_POST['login'])) 
+                        {
+                            if ($_POST['inputUsername'] == $inputUsername && $_POST['inputPassword'] == $inputPassword)
+                            {
+                                $_SESSION["inputUsername"] = $inputUsername; 
+                                header("location: dashboard.php");
+                                echo "Nama Pangguna = ".$_SESSION["inputUsername"];
+                            } 
+                            else 
+                            {   
+                                echo "<p>Username Atau Password Salah </p>";
+                            }
+                        }  
+                    ?>
+                        <button type="submit" class="btn btn-success" name="login" value="login"> Login </button>
                 </form>
                 </div>
             </div>
